@@ -1,7 +1,7 @@
 package com.training.basics;
 
 /**
- * Class for Employee details
+ * Class for Employee details 
  * 
  * @author Chinna.Putha
  *
