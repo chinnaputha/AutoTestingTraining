@@ -6,9 +6,6 @@ public class TestExampleDT {
 		System.out.println("I am in Test Example DT class");
 		DataTypesExamles2 dtm = new DataTypesExamles2();
 		dtm.dataTypesEx();
-		
-		
-
 	}
 
 }
