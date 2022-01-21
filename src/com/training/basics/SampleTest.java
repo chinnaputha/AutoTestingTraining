@@ -19,6 +19,8 @@ public class SampleTest {
 		SampleTest st = new SampleTest();
 		st.add();
 		
+		ConstructorEx cex = new ConstructorEx(10, 10.11f, 'd');
+		
 		
 	}
 
