@@ -2,6 +2,7 @@ package com.training.selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SampleAuto {
@@ -25,6 +26,8 @@ public class SampleAuto {
 		driver.manage().window().maximize();
 		
 		//enter text in username field
+//		WebElement ele = driver.findElement(By.id("uid"));
+//		ele.sendKeys("Tester");
 		driver.findElement(By.id("uid")).sendKeys("Tester");
 		driver.findElement(By.id("upwd")).sendKeys("sadfsdfsdfs");
 		Thread.sleep(4000);
