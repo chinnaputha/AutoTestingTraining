@@ -5,29 +5,29 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class AutoRegisterForm2 extends TestBase {
+public class AutoRegisterFormXpath extends TestBase {
 
 	public void registerForm() throws InterruptedException {
 		openApplication("chrome", "http://demo.automationtesting.in/Register.html");
-		// WebElement ele = driver.findElement(By.cssSelector("input[placeholder='First
+		// WebElement ele = driver.findElement(By.xpath("input[placeholder='First
 		// Name']"));
 		// ele.sendKeys("MyFirstName");
 
-		driver.findElement(By.cssSelector("input[placeholder='First Name']")).sendKeys("MYFIRSTNAME");
-		driver.findElement(By.cssSelector("input[placeholder='Last Name']")).sendKeys("MYLASTNAME");
-		driver.findElement(By.cssSelector("textarea[ng-model='Adress']")).sendKeys("HNO-111,KDP,AP,INDIA,560037");
+		driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("MYFIRSTNAME");
+		driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("MYLASTNAME");
+		driver.findElement(By.xpath("//textarea[@ng-model='Adress']")).sendKeys("HNO-111,KDP,AP,INDIA,560037");
 
-		driver.findElement(By.cssSelector("input[type='email']")).sendKeys("test@gmail.com");
-		driver.findElement(By.cssSelector("input[ng-model='Phone']")).sendKeys("1234567890");
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("test@gmail.com");
+		driver.findElement(By.xpath("//input[@ng-model='Phone']")).sendKeys("1234567890");
 
-		boolean isRadioButtonSelected = driver.findElement(By.cssSelector("input[value='FeMale']")).isSelected();
+		boolean isRadioButtonSelected = driver.findElement(By.xpath("//input[@value='FeMale']")).isSelected();
 		System.out.println("Radio button selected-->" + isRadioButtonSelected);
 		if (!isRadioButtonSelected) {
 			System.out.println("inside if");
-			driver.findElement(By.cssSelector("input[value='FeMale']")).click();
+			driver.findElement(By.xpath("//input[@value='FeMale']")).click();
 		}
 
-		WebElement chxBx = driver.findElement(By.cssSelector("input[value='Cricket']"));
+		WebElement chxBx = driver.findElement(By.xpath("//input[@value='Cricket']"));
 		if (chxBx.isEnabled()) {
 			System.out.println("Check box enabled");
 			chxBx.click();
@@ -35,7 +35,7 @@ public class AutoRegisterForm2 extends TestBase {
 		}
 		Thread.sleep(3000);
 		// how to find how many check boxes in a web page
-		List<WebElement> mulChkBoxes = driver.findElements(By.cssSelector("input[type='checkbox']"));
+		List<WebElement> mulChkBoxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
 		System.out.println("total checkboxes in a webpage-->" + mulChkBoxes.size());// 3
 
 //		int count = 1;
@@ -78,7 +78,7 @@ public class AutoRegisterForm2 extends TestBase {
 		
 		
 		//get links using parent to child relationship
-		List<WebElement> footerLinks = driver.findElements(By.cssSelector("footer[id='footer'] a"));
+		List<WebElement> footerLinks = driver.findElements(By.xpath("//footer[@id='footer']//a"));
 		System.out.println("total footer links in a web page -->"+footerLinks.size());
 		for(WebElement fLink:footerLinks) {
 			System.out.println("links address-->"+fLink.getAttribute("href"));
@@ -95,7 +95,7 @@ public class AutoRegisterForm2 extends TestBase {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		AutoRegisterForm2 arf = new AutoRegisterForm2();
+		AutoRegisterFormXpath arf = new AutoRegisterFormXpath();
 		arf.registerForm();
 
 	}

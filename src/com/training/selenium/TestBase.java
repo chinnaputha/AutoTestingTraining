@@ -31,4 +31,9 @@ public class TestBase {
 		driver.manage().window().maximize();
 
 	}
+	
+	public void closeBrowser() {
+		driver.close();
+	}
+	
 }
