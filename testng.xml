@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="tetngex">
+	<test name="examples">
+		<classes>
+			<class name="com.training.testng.TestNGExample1" />
+			<class name="com.training.testng.TestNGExample2" />
+			<class name="com.training.testng.TestNGExample3" />
+			<class name="com.training.testng.TestNGExample4" />
+			<class name="com.training.testng.TestNGExample5" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
