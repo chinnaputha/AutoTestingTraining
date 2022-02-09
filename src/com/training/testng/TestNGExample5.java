@@ -2,6 +2,8 @@ package com.training.testng;
 
 import org.testng.annotations.Test;
 
+
+@Test(groups = "Regression")
 public class TestNGExample5 {
 
 	@Test
