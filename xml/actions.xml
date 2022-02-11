@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ActionsEx">
+<parameter name="appURL" value="http://demo.automationtesting.in/Register.html" />
+  <test name="actionTest">
+    <classes>
+      <class name="com.training.testng.ActionsExamples"/>
+    </classes>
+  </test> <!-- actionTest -->
+</suite> <!-- ActionsEx -->

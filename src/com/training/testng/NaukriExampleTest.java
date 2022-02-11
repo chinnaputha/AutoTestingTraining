@@ -1,5 +1,7 @@
 package com.training.testng;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,7 +17,7 @@ public class NaukriExampleTest extends TestBase {
 
 	@Test
 	@Parameters({"browser","username","password"})
-	public void naukriLogin(String browser,String username,String password) throws InterruptedException {
+	public void naukriLogin(String browser,String username,String password) throws InterruptedException, IOException {
 		openApplication(browser, "https://www.naukri.com/");
 		driver.findElement(By.xpath("//a[@id='login_Layer']")).click();
 		//Thread.sleep(30000);
@@ -34,17 +36,19 @@ public class NaukriExampleTest extends TestBase {
 		System.out.println("PageTitle-->"+pageTitle);
 		Assert.assertEquals(pageTitle, "Home | Mynaukri","Page title is mismatching...");
 		System.out.println("11111111");
+		getScreenshot("Naukri");
 		
 	}
 
 	@Test(dependsOnMethods = "naukriLogin")
-	public void profileUpdate() {
+	public void profileUpdate() throws IOException {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable((By.xpath("//div[@class='updateProfile']/div[2]/div"))));
 		
 		driver.findElement(By.xpath("//div[@class='updateProfile']/div[2]/div")).click();
 		
 		System.out.println("profile updaated");
+		
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated((By.xpath("//div[@class='dashboard blue-bg card']"))));
 	
