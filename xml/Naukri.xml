@@ -8,8 +8,17 @@
 	<test name="profileUpdate">
 		<classes>
 			<class name="com.training.testng.NaukriExampleTest" />
+		<!-- 	<class name="com.training.testng.NaukriDataProvider" /> -->
 		</classes>
 	</test> 
+	
+	<test name="Naukridataprovider">
+		<classes>
+			<class name="com.training.testng.NaukriDataProvider" />
+		</classes>
+	</test> 
+
+
 
 
 	<!-- <test name="profileUpdate2">
