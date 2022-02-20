@@ -6,3 +6,12 @@ poi-3.15
 poi-ooxml-3.15
 poi-ooxml-schemas-3.15
 xmlbeans-2.6.0
+
+
+//saucelabs account creation
+https://saucelabs.com/sign-up
+
+
+//autoit download path
+
+https://www.autoitscript.com/site/autoit/downloads/
